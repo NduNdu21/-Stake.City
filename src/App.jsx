@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import MapboxMap from "./components/MapboxMap";
 import Roadmap from "./components/Roadmap";
 import LitePaper from "./components/LitePaper";
 import WhitePaper from "./components/WhitePaper";
 import DocPage from "./components/documentation";
-import Header from "./components/Header"; // Import the Header component
+import Header from "./components/Header"; // Import the Header component#
+import Dashboard from "./components/Dashboard";
 import styles from './App.module.css';
 
 const App = () => {
@@ -54,7 +55,7 @@ const App = () => {
       addChar = setInterval(tick, 100);
     }
     return () => clearInterval(addChar);
-  }, [typedText, inputActive, hasSearched]);
+  }, [typedText, inputActive, hasSearched, index]);
 
   const handleSearch = async (newQuery) => {
     if (!hasSearched) {
@@ -138,6 +139,7 @@ const App = () => {
         <Route path="/lite-paper" element={<LitePaper />} />
         <Route path="/white-paper" element={<WhitePaper />} />
         <Route path="/documentation" element={<DocPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
