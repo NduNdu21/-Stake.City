@@ -14,7 +14,7 @@ const MapboxMap = ({ position, searchPerformed, showControls }) => {
     if (mapContainer.current) {
       const map = new mapboxgl.Map({
         container: mapContainer.current,
-        style: 'mapbox://styles/robinrai1349/cm1apho4200fz01pc323f11og',
+        style: 'mapbox://styles/ndumisobm/cm1rp85qt00yv01r2ht2zf2l6',
         projection: 'globe',
         zoom: searchPerformed ? 7 : 1, // Initial zoom level
         center: position || [0, 0], // Initial position, default to [0, 0]
@@ -56,7 +56,7 @@ const MapboxMap = ({ position, searchPerformed, showControls }) => {
 
       return () => map.remove();
     }
-  }, [showControls]);
+  }, [showControls, position, searchPerformed, userInteracting]);
 
   // Fly to the searched location smoothly without interruption
   useEffect(() => {
