@@ -63,7 +63,7 @@ const ProfileSection = () => {
 
 const ActiveStakesSection = () => {
     return (
-        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] mt-6 ${styles.float}`}>
+        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float} size-full`}>
             <span className="text-lg font-semibold">Active Stakes</span>
             <p></p>
         </div>
@@ -72,7 +72,7 @@ const ActiveStakesSection = () => {
 
 const PointsSection = () => {
     return (
-        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float}`}>
+        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float} size-full`}>
             <p className="text-lg font-semibold">Your Balance</p>
             <div className="flex items-center">
                 <img src={token} alt="" className="w-12 h-12 p-1" />
@@ -96,7 +96,7 @@ const PointsSection = () => {
 
 const LevelSection = () => {
     return (
-        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] justify-items-center ${styles.float}`}>
+        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] justify-items-center ${styles.float} size-full`}>
             <span className="text-lg font-semibold">My Level</span>
             <p className="text-2xl font-bold">80</p>
             <p className="text-lg">Badges</p>
@@ -132,7 +132,7 @@ const LevelSection = () => {
 
 const HistorySection = () => {
     return (
-        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float}`}>
+        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float} size-full`}>
             <span className="text-xl font-bold">History</span>
             <p>--</p>
             <button className="mr-3 px-1 py-1 bg-[#20C997] rounded-3xl">Stakes</button>
