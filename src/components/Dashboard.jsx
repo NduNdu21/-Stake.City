@@ -15,9 +15,6 @@ export default function Dashboard() {
 
     return (
         <div className="bg-neutral-100 h-screen w-screen overflow-hidden flex">
-            {/* Sidebar */}
-            <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-
             {/* Main content */}
             <div className={classNames("flex flex-col flex-1 transition-all duration-300", {
                 "ml-0 md:ml-60": isSidebarOpen, // Adjust margin based on sidebar state
@@ -31,9 +28,12 @@ export default function Dashboard() {
                     <DashboardGrid />
                 </div>
             </div>
+            
+            {/* Sidebar */}
+            <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} className="fixed right-0"/>
 
             {/* Mobile hamburger menu */}
-            <div className="fixed top-3 left-3 z-50 md:hidden">
+            <div className="fixed top-3 right-3 z-50 md:hidden">
                 <button onClick={toggleSidebar}>
                     <img src={logo} alt='' className='w-10 h-10'/>
                 </button>
