@@ -3,6 +3,7 @@ import { Menu, Popover, Transition } from '@headlessui/react'
 import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
 //import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
+import profileImage from '../imgs/avatar.svg';
   
 export default function DashboardHeader({toggleSidebar}) {
     //const navigate = useNavigate()
@@ -87,7 +88,7 @@ export default function DashboardHeader({toggleSidebar}) {
 							<span className="sr-only">Open user menu</span>
 							<div
 								className="h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
-								style={{ backgroundImage: './imgs/avatar.svg' }}
+								style={{ backgroundImage: `url(${profileImage})` }}
 							>
 							</div>
 						</Menu.Button>
