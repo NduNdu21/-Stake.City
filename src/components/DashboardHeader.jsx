@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
 import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
   
-export default function DashboardHeader() {
-    const navigate = useNavigate()
+export default function DashboardHeader({toggleSidebar}) {
+    //const navigate = useNavigate()
 
     return (
         <div className="bg-[#0D1B2A] h-14 px-4 flex justify-between items-center ">
@@ -80,17 +80,19 @@ export default function DashboardHeader() {
 				</Popover>
                 <Menu as="div" className="relative">
 					<div>
-						<Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-neutral-400">
+						<Menu.Button 
+							onClick={toggleSidebar}
+							className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-neutral-400"
+						>
 							<span className="sr-only">Open user menu</span>
 							<div
 								className="h-10 w-10 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
 								style={{ backgroundImage: './imgs/avatar.svg' }}
 							>
-								<span className="sr-only">Marc Backes</span>
 							</div>
 						</Menu.Button>
 					</div>
-					<Transition
+					{/*<Transition
 						as={Fragment}
 						enter="transition ease-out duration-100"
 						enterFrom="transform opacity-0 scale-95"
@@ -139,7 +141,7 @@ export default function DashboardHeader() {
 								)}
 							</Menu.Item>
 						</Menu.Items>
-					</Transition>
+					</Transition>*/}
 				</Menu>
             </div>
         </div>
