@@ -29,7 +29,6 @@ export default function Dashboard() {
             
             {/* Sidebar */}
             <Sidebar isSidebarOpen={isSidebarOpen}  className={`absolute right-0 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}/>
-
         </div>
     );
 }
