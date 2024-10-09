@@ -7,9 +7,8 @@ import token from "../imgs/bitcoin-2207.svg"
 
 
 const DashboardGrid = () => {
-
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-4 p-6 text-white min-h-screen ${styles.dashback} ${styles.starAnimation}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-4 p-6 text-white min-h-screen ${styles.dashback} ${styles.starAnimation}`}>
             {/* Row 1 */}
             <div className="col-span-1">
                 {/* Profile Column */}
@@ -85,7 +84,7 @@ const stakes = [
 const ActiveStakesSection = () => {
     return (
         <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float} size-full`}>
-            <span className="text-lg font-semibold">Active Stakes</span>
+            <span className="text-lg font-bold">Active Stakes</span>
             <div className="divide-y divide-[#A0AAB2]">
                 {stakes.map(({ username, stake, staking_reward, time_left }, index) => (
                     <div
