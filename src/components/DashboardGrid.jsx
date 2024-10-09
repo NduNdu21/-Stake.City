@@ -61,11 +61,54 @@ const ProfileSection = () => {
     )
 }
 
+const stakes = [
+    {
+        username: "MJ23",
+        stake: "What is the fastest way to...?",
+        staking_reward: "200",
+        time_left: "2hr30min",
+    },
+    {
+        username: "MJ23",
+        stake: "What is the fastest way to...?",
+        staking_reward: "200",
+        time_left: "2hr30min",
+    },
+    {
+        username: "MJ23",
+        stake: "What is the fastest way to...?",
+        staking_reward: "200",
+        time_left: "2hr30min",
+    }
+]
+
 const ActiveStakesSection = () => {
     return (
         <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] ${styles.float} size-full`}>
             <span className="text-lg font-semibold">Active Stakes</span>
-            <p></p>
+            <div className="divide-y divide-[#A0AAB2]">
+                {stakes.map(({ username, stake, staking_reward, time_left }, index) => (
+                    <div
+                        key={index}
+                        className="flex items-center justify-between pb-3 pt-3 last:pb-0"
+                    >
+                        <div className="flex items-center gap-x-3">
+                            <div>
+                                {username}
+                            </div>
+                            <div>
+                                {stake}
+                            </div>
+                            <div>
+                                {staking_reward}
+                            </div>
+                            <div>
+                                {time_left}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
@@ -136,7 +179,7 @@ const HistorySection = () => {
             <span className="text-xl font-bold">History</span>
             <p>--</p>
             <button className="mr-3 px-1 py-1 bg-[#20C997] rounded-3xl">Stakes</button>
-            <button className="px-2 py-1 bg-[#20C997] rounded-3xl">Tasks</button>
+            <button className="px-2 py-1 bg-[#20C997] rounded-3xl">Staking Reward</button>
         </div>
     )
 }
