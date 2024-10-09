@@ -11,10 +11,10 @@ export default function Sidebar({ isSidebarOpen }) {
     return (
         <div
             className={classNames(
-                "bg-[#0D1B2A] w-60 p-3 flex flex-col text-white fixed md:relative top-0 h-full transition-transform duration-300 z-40",
+                "bg-[#0D1B2A] w-60 p-3 flex flex-col text-white fixed top-0 h-full transition-transform duration-300 z-40",
                 {
-                    "-translate-x-full md:translate-x-0": !isSidebarOpen, // Hidden on smaller screens
-                    "translate-x-0": isSidebarOpen, // Shown on smaller screens
+                    "-translate-x-full": !isSidebarOpen, // Hidden
+                    "translate-x-0": isSidebarOpen, // Shown
                 }
             )}
         >
