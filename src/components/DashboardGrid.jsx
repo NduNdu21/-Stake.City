@@ -42,7 +42,7 @@ const ProfileSection = () => {
     //const navigate = useNavigate();
 
     return (
-        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] text-center ${styles.float} w-full`}>
+        <div className={`bg-gray-800 p-6 rounded-lg shadow-md shadow-[#20C997] text-center ${styles.float} size-full`}>
             <span className="text-[#F0F3F5] text-xl font-bold">Profile</span>
             <img
                 src={profileImage}
