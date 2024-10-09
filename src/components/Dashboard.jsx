@@ -4,7 +4,6 @@ import Sidebar from './Sidebar';
 import DashboardHeader from './DashboardHeader';
 import DashboardGrid from './DashboardGrid';
 //import { HiMenuAlt3 } from 'react-icons/hi';
-import logo from "../logo7.svg"
 
 export default function Dashboard() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,11 +16,10 @@ export default function Dashboard() {
         <div className="bg-neutral-100 h-screen w-screen overflow-hidden flex">
             {/* Main content */}
             <div className={classNames("flex flex-col flex-1 transition-all duration-300", {
-                "ml-0 md:ml-60": isSidebarOpen, // Adjust margin based on sidebar state
-                "ml-0": !isSidebarOpen, // No margin if the sidebar is closed
+                "mr-0 md:mr-60": isSidebarOpen, // Adjust margin based on sidebar state
             })}>
                 {/* Header */}
-                <DashboardHeader />
+                <DashboardHeader toggleSidebar={toggleSidebar}/>
 
                 {/* Grid content */}
                 <div className="flex-1 min-h-0 overflow-auto">
@@ -30,14 +28,8 @@ export default function Dashboard() {
             </div>
             
             {/* Sidebar */}
-            <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} className="fixed right-0"/>
+            <Sidebar isSidebarOpen={isSidebarOpen}  className={`absolute right-0 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}/>
 
-            {/* Mobile hamburger menu */}
-            <div className="fixed top-3 right-3 z-50 md:hidden">
-                <button onClick={toggleSidebar}>
-                    <img src={logo} alt='' className='w-10 h-10'/>
-                </button>
-            </div>
         </div>
     );
 }
