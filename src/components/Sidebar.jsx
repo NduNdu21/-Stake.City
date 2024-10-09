@@ -11,9 +11,9 @@ export default function Sidebar({ isSidebarOpen }) {
     return (
         <div
             className={classNames(
-                "bg-[#0D1B2A] w-60 p-3 flex flex-col text-white fixed top-0 h-full transition-transform duration-300 z-40",
+                "bg-[#0D1B2A] w-60 p-3 flex flex-col text-white fixed top-0 right-0 h-full transition-transform duration-300 z-40",
                 {
-                    "-translate-x-full": !isSidebarOpen, // Hidden
+                    "translate-x-full": !isSidebarOpen, // Hidden
                     "translate-x-0": isSidebarOpen, // Shown
                 }
             )}
